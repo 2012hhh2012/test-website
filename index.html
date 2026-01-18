@@ -75,21 +75,30 @@
         }
         .bio-text { max-width: 600px; margin: 0 auto; color: var(--text-muted); }
 
-        /* --- LINKS --- */
+        /* --- LINKS (UPDATED FOR SMALLER SIZE) --- */
         .links-container {
-            display: flex; flex-direction: column;
-            gap: 1rem; max-width: 400px; margin: 0 auto; width: 100%;
+            display: flex; 
+            flex-direction: column;
+            gap: 0.8rem; /* Reduced gap */
+            max-width: 300px; /* Reduced width from 400px */
+            margin: 0 auto; 
+            width: 100%;
         }
         .link-btn {
-            background: var(--card-bg); padding: 1rem;
-            text-align: center; border-radius: 8px;
-            font-weight: bold; border: 1px solid #333;
+            background: var(--card-bg); 
+            padding: 0.75rem; /* Reduced padding */
+            text-align: center; 
+            border-radius: 8px;
+            font-weight: bold; 
+            font-size: 0.95rem; /* Slightly smaller font */
+            border: 1px solid #333;
         }
         .link-btn:hover { background: var(--primary); color: #000; transform: translateY(-2px); }
 
-        /* --- MUSIC / FAVORITE SONGS --- */
+        /* --- MUSIC / PLAYLISTS --- */
         .music-grid {
             display: grid;
+            /* Changed to allow wider playlist boxes */
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             max-width: 1000px;
@@ -172,30 +181,39 @@
     <section id="links">
         <h2>Links</h2>
         <div class="links-container">
-            <a href="https://discord.com/users/1127437783460495452" class="link-btn">Discord</a>
-            <a href="https://github.com/2012hhh2012" class="link-btn">Github</a>
-            <a href="https://www.reddit.com/user/Miserable-Feed7410/" class="link-btn">Reddit</a>
+            <a href="https://discord.com/users/1127437783460495452" class="link-btn" target="_blank">Discord</a>
+            <a href="https://github.com/2012hhh2012" class="link-btn" target="_blank">Github</a>
+            <a href="https://www.reddit.com/user/Miserable-Feed7410/" class="link-btn" target="_blank">Reddit</a>
         </div>
     </section>
 
-    <!-- MUSIC SECTION (FAVORITES) -->
+    <!-- MUSIC SECTION (PLAYLISTS) -->
     <section id="music">
         <h2>On Rotation 🎧</h2>
         <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">
-            Some songs that are stuck in my head right now.
+            Check out my current playlists.
         </p>
         
         <div class="music-grid">
-            <!-- SONG 1: Spotify Embed -->
-            <!-- To get your own: Go to Spotify > Click 3 dots on song > Share > Embed Track -->
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4yNk9iz9WVJikRFle3XEvn?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            
+            <!-- SPOTIFY PLAYLIST EMBED -->
+            <!-- 
+                 How to get this: 
+                 1. Go to your Playlist in Spotify app.
+                 2. Click "..." > Share > Embed Playlist.
+                 3. Copy the code and replace the iframe below.
+            -->
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-            <!-- SONG 2: Spotify Embed -->
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1XGmzt0PVuFgQYYnV2It7A?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <!-- YOUTUBE PLAYLIST EMBED -->
+            <!-- 
+                 How to get this:
+                 1. Go to your Playlist page on YouTube.
+                 2. Click the "Share" arrow button.
+                 3. Click "Embed" and copy the code.
+            -->
+            <iframe width="100%" height="352" src="https://www.youtube.com/embed/videoseries?list=PL4fGSI1pDJn6jJ8-5C482rTPr5d_N-_Sj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius:12px"></iframe>
 
-            <!-- SONG 3: YouTube Embed -->
-            <!-- To get your own: Go to YouTube > Share > Embed -->
-            <iframe width="100%" height="152" src="https://www.youtube.com/embed/uX22CL-lIbk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius: 12px;"></iframe>
         </div>
     </section>
 
